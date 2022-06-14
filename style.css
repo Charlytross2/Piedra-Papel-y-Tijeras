@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+* {
+   box-sizing: content-box;
+   margin: 0;
+   padding: 0;
+}
+
+body {
+   background-color: #243A65;
+}
+
+.title {
+   text-align: center;
+   color: #fff;
+   font-family: Victor Mono;
+   font-size: 40px;
+}
+
+p {
+   font-size: 30px;
+   color: #fff;
+   margin: 50px;
+}
+
+.juego {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.botones__juego {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column-reverse;
+   width: 500px;
+   height: 500px;
+   background-color: blueviolet;
+   margin: 10px;
+}
+
+.img-juego,
+.img-machine {
+   width: 300px;
+   height: 300px;
+}
+
+select {
+   margin-top: 20px;
+   padding: 10px;
+   border-radius: 20px;
+   border: none;
+   cursor: pointer;
+}
+
+select:focus {
+   outline: 0;
+}
+
+.vs {
+   color: #fff;
+   font-size: 40px;
+   font-weight: 700;
+}
+
+.machine__juego {
+   width: 500px;
+   height: 500px;
+   background-color: blueviolet;
+   margin: 10px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+
+.btn__container {
+   display: flex;
+   justify-content: center;
+}
+
+button {
+   margin: 10px;
+   padding: 30px;
+   border-radius: 15px;
+   border: none;
+   width: 50px;
+   font-size: 20px;
+   cursor: pointer;
+}
+
+.jugador {
+   font-size: 30px;
+}
+
+.machine__juego h3 {
+   margin-bottom: 30px;
+}
+
+.resultado__juego {
+   text-align: center;
+}
+
+.resultado__juego::first-line {
+   font-size: 40px;
+   color: #fff;
+}
