@@ -1,8 +1,10 @@
 const opciones = ["Piedra", "Papel", "Tijera"];
 const btn = document.getElementById("btn-jugar");
 const machineJuego = document.querySelector(".img-machine");
-const divResultado = document.querySelector(".resultado__juego");
 let valores = document.getElementById("opciones");
+const modal = document.querySelector(".modal");
+const closeModal = document.querySelector(".modal__close");
+const resultadoModal = document.querySelector(".modal__resultado");
 
 function encontrarOption() {
   let select = valores.value;
@@ -16,8 +18,14 @@ function mostrarImagen(seleccionado) {
 }
 
 function boton() {
-  btn.addEventListener("click", () => {
+  btn.addEventListener("click", (e) => {
     jugar();
+    e.preventDefault();
+    modal.classList.add("modal--show");
+  });
+  closeModal.addEventListener("click", (e) => {
+    e.preventDefault();
+    modal.classList.remove("modal--show");
   });
 }
 
@@ -48,15 +56,15 @@ function jugar() {
     (seleccionado == rutaPiedra.nombre && varMachine == 3) ||
     (seleccionado == rutaTijera.nombre && varMachine == 2)
   ) {
-    divResultado.textContent = `Empate`;
+    resultadoModal.textContent = `Empate`;
   } else if (
     (seleccionado == rutaPapel.nombre && varMachine == 3) ||
     (seleccionado == rutaTijera.nombre && varMachine == 1) ||
     (seleccionado == rutaPiedra.nombre && varMachine == 2)
   ) {
-    divResultado.textContent = "Ganaste";
+    resultadoModal.textContent = "Ganaste";
   } else {
-    divResultado.textContent = `Perdiste`;
+    resultadoModal.textContent = `Perdiste`;
   }
 }
 

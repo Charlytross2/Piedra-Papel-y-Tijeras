@@ -10,7 +10,6 @@
   <body>
     <h1 class="title">Bienvenido al Juego</h1>
     <p>Selecciona la opcion que desees:</p>
-    <div class="resultado__juego"></div>
     <div class="juego">
       <section class="botones__juego">
         <select name="opciones" id="opciones" onchange="encontrarOption()">
@@ -30,6 +29,12 @@
     <div class="btn__container">
       <button id="btn-jugar">Jugar</button>
     </div>
+    <section class="modal">
+      <div class="modal__container">
+        <span class="modal__resultado"></span>
+        <a href="#" class="modal__close">Cerrar</a>
+      </div>
+    </section>
     <script src="./main.js"></script>
   </body>
 </html>
